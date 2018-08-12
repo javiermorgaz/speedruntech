@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.5.1)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Swift (3.4.2):
+    - CocoaLumberjack/Default
+  - MBProgressHUD (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5.0)
+  - CocoaLumberjack/Swift (~> 3.4.0)
+  - MBProgressHUD (~> 1.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CocoaLumberjack
+    - MBProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+
+PODFILE CHECKSUM: 620e8bdebc3025d7b628916d440dd1c345231438
+
+COCOAPODS: 1.5.3
