@@ -29,6 +29,9 @@
 		2922274D2120495500F4901D /* GameInfoDependences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2922274C2120495500F4901D /* GameInfoDependences.swift */; };
 		2922274F21204F4F00F4901D /* RestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2922274E21204F4F00F4901D /* RestResponse.swift */; };
 		29222752212053BB00F4901D /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222751212053BB00F4901D /* GameRouter.swift */; };
+		296210162121F12900BA06C3 /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296210152121F12900BA06C3 /* GameListTableViewCell.swift */; };
+		296210182121F51A00BA06C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296210172121F51A00BA06C3 /* Localizable.strings */; };
+		2962101A2121F6A000BA06C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296210192121F6A000BA06C3 /* String.swift */; };
 		3BEB5AF67EFE02BF2F5E4988 /* Pods_speedruntechTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185FEB9B546363795E69DC82 /* Pods_speedruntechTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		2922274C2120495500F4901D /* GameInfoDependences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoDependences.swift; sourceTree = "<group>"; };
 		2922274E21204F4F00F4901D /* RestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestResponse.swift; sourceTree = "<group>"; };
 		29222751212053BB00F4901D /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		296210152121F12900BA06C3 /* GameListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
+		296210172121F51A00BA06C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		296210192121F6A000BA06C3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6547A694395A0800F39D9DC7 /* Pods_speedruntech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedruntech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77ADE78C8802448F92B8A46C /* Pods-speedruntech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedruntech.release.xcconfig"; path = "Pods/Target Support Files/Pods-speedruntech/Pods-speedruntech.release.xcconfig"; sourceTree = "<group>"; };
 		993B4FE014D0D9A9BD8CD1E2 /* Pods-speedruntechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedruntechTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-speedruntechTests/Pods-speedruntechTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +129,7 @@
 				2922271E211ED43F00F4901D /* Data */,
 				2922271D211ED43F00F4901D /* Domain */,
 				2922271F211ED43F00F4901D /* View */,
-				292227452120213A00F4901D /* Utils */,
+				292227452120213A00F4901D /* Utility */,
 				29222712211ED05200F4901D /* Resources */,
 			);
 			path = speedruntech;
@@ -152,6 +158,7 @@
 				29222713211ED05200F4901D /* Assets.xcassets */,
 				29222714211ED05200F4901D /* LaunchScreen.storyboard */,
 				29222718211ED05200F4901D /* Info.plist */,
+				296210172121F51A00BA06C3 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -209,6 +216,7 @@
 				2922272D211EECBD00F4901D /* GameListDependeces.swift */,
 				29222736211EFFDE00F4901D /* GameListViewController.swift */,
 				292227402120152C00F4901D /* GameListPresenter.swift */,
+				296210142121F10800BA06C3 /* Views */,
 			);
 			path = GameList;
 			sourceTree = "<group>";
@@ -257,12 +265,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		292227452120213A00F4901D /* Utils */ = {
+		292227452120213A00F4901D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				296210192121F6A000BA06C3 /* String.swift */,
 				292227462120215B00F4901D /* JsonDecodable.swift */,
 			);
-			path = Utils;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		29222750212052C400F4901D /* Routers */ = {
@@ -271,6 +280,14 @@
 				29222751212053BB00F4901D /* GameRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		296210142121F10800BA06C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				296210152121F12900BA06C3 /* GameListTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		493C7B372AB288A645FF1C73 /* Frameworks */ = {
@@ -378,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2922272C211EE89500F4901D /* Game.storyboard in Resources */,
+				296210182121F51A00BA06C3 /* Localizable.strings in Resources */,
 				29222719211ED05200F4901D /* Assets.xcassets in Resources */,
 				2922271A211ED05200F4901D /* LaunchScreen.storyboard in Resources */,
 			);
@@ -421,12 +439,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,9 +478,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2962101A2121F6A000BA06C3 /* String.swift in Sources */,
 				29222732211EF67600F4901D /* GameCoordinator.swift in Sources */,
 				2922274D2120495500F4901D /* GameInfoDependences.swift in Sources */,
 				29222749212048E700F4901D /* GameInfoPresenter.swift in Sources */,
+				296210162121F12900BA06C3 /* GameListTableViewCell.swift in Sources */,
 				29222730211EF61E00F4901D /* AppStoryboard.swift in Sources */,
 				2922272E211EECBD00F4901D /* GameListDependeces.swift in Sources */,
 				29222711211ECFA600F4901D /* AppDelegate.swift in Sources */,

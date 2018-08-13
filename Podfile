@@ -12,6 +12,7 @@ def shared_pods
   
   # UI
   pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SDWebImage', '~> 4.4.0'
 
   # Logging
   pod 'CocoaLumberjack/Swift', '~> 3.4.0'

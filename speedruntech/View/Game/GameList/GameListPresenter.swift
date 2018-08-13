@@ -43,7 +43,7 @@ public class GameListPresenter : GameListViewControllerDelegate {
         })
     }
     
-    public func gameTapped() {
+    public func tapped(game:Game) {
         
     }
 }

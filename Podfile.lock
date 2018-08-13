@@ -4,23 +4,29 @@ PODS:
   - CocoaLumberjack/Swift (3.4.2):
     - CocoaLumberjack/Default
   - MBProgressHUD (1.1.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5.0)
   - CocoaLumberjack/Swift (~> 3.4.0)
   - MBProgressHUD (~> 1.1.0)
+  - SDWebImage (~> 4.4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CocoaLumberjack
     - MBProgressHUD
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 620e8bdebc3025d7b628916d440dd1c345231438
+PODFILE CHECKSUM: e0d078958c42a5ae40838ad44c9a176c67255be2
 
 COCOAPODS: 1.5.3
