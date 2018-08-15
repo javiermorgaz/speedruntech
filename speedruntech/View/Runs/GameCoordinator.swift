@@ -30,9 +30,9 @@ class GameCoodinator: Coordinator {
 
 extension GameCoodinator:GameListCoodinatorDelegate {
     
-    func presentGameInfo(game: Game) {
-        let gameInfoDependeces = GameInfoDependences()
-        gameNavigationController.show(gameInfoDependeces.GameInfoController(game:game), sender: self)
+    func presentRunInfo(game: Game) {
+        let runInfoDependeces = RunInfoDependences()
+        gameNavigationController.show(runInfoDependeces.RunInfoController(game:game), sender: self)
     }
 }
 

@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="-226.40000000000001" y="164.16791604197903"/>
         </scene>
-        <!--Game Info View Controller-->
+        <!--Run Info View Controller-->
         <scene sceneID="8WJ-Fv-XA8">
             <objects>
-                <viewController storyboardIdentifier="GameInfoViewController" id="33e-NK-N2S" customClass="GameInfoViewController" customModule="speedruntech" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RunInfoViewController" id="33e-NK-N2S" customClass="RunInfoViewController" customModule="speedruntech" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="krG-ph-kEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,12 +242,32 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogj-3K-MhB">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="o4y-PW-R7Q"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2u-Ud-EsQ">
+                                                <rect key="frame" x="0.0" y="99" width="375" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="6QT-7I-ZEh"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="ogj-3K-MhB" firstAttribute="top" secondItem="w0j-5X-cOV" secondAttribute="top" id="93S-d4-wpz"/>
                                             <constraint firstAttribute="trailing" secondItem="l9J-NW-oe8" secondAttribute="trailing" id="Nsc-MZ-nbd"/>
+                                            <constraint firstAttribute="trailing" secondItem="e2u-Ud-EsQ" secondAttribute="trailing" id="O9a-pq-v4x"/>
+                                            <constraint firstAttribute="trailing" secondItem="ogj-3K-MhB" secondAttribute="trailing" id="OO7-bn-pz1"/>
+                                            <constraint firstAttribute="bottom" secondItem="e2u-Ud-EsQ" secondAttribute="bottom" id="PiF-Iu-TGs"/>
                                             <constraint firstItem="l9J-NW-oe8" firstAttribute="top" secondItem="w0j-5X-cOV" secondAttribute="top" id="RhH-xX-6wa"/>
+                                            <constraint firstItem="ogj-3K-MhB" firstAttribute="leading" secondItem="w0j-5X-cOV" secondAttribute="leading" id="bwg-2k-X29"/>
                                             <constraint firstAttribute="bottom" secondItem="l9J-NW-oe8" secondAttribute="bottom" id="hOU-wl-Ja9"/>
+                                            <constraint firstItem="e2u-Ud-EsQ" firstAttribute="leading" secondItem="w0j-5X-cOV" secondAttribute="leading" id="uTi-sJ-C26"/>
                                             <constraint firstItem="l9J-NW-oe8" firstAttribute="leading" secondItem="w0j-5X-cOV" secondAttribute="leading" id="v7M-ub-Gii"/>
                                         </constraints>
                                     </view>
@@ -256,10 +276,12 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Op8-Td-lI3">
                                                 <rect key="frame" x="127.5" y="30" width="120" height="30"/>
+                                                <color key="backgroundColor" red="0.3921568627" green="0.72941176470000002" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0hp-JM-dxb"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="qAr-zU-iIh"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <action selector="videoButtonAction:" destination="33e-NK-N2S" eventType="touchUpInside" id="Etg-ey-JvL"/>
                                                 </connections>

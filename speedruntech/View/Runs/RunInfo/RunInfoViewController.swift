@@ -1,5 +1,5 @@
 //
-//  GameInfoViewController.swift
+//  RunInfoViewController.swift
 //  speedruntech
 //
 //  Created by Javier Morgaz García on 12/8/18.
@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 import SDWebImage
 
-public struct GameInfoViewModel {
+public struct RunInfoViewModel {
     let gameName: String
     let logoUri: String
     let userName: String
     let time: String
 }
 
-public protocol GameInfoViewControllerDelegate: class {
+public protocol RunInfoViewControllerDelegate: class {
     
     func viewLoaded()
     func showVideo()
 }
 
-class GameInfoViewController : BaseViewController, GameInfoViewInterface {
+class RunInfoViewController : BaseViewController, RunInfoViewInterface {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -33,9 +33,9 @@ class GameInfoViewController : BaseViewController, GameInfoViewInterface {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var videoButton: UIButton!
     
-    weak var delegate: GameInfoViewControllerDelegate?
+    weak var delegate: RunInfoViewControllerDelegate?
     
-    public var presenter: GameInfoPresenter? {
+    public var presenter: RunInfoPresenter? {
         didSet {
             delegate = presenter
         }
@@ -54,16 +54,16 @@ class GameInfoViewController : BaseViewController, GameInfoViewInterface {
         delegate?.showVideo()
     }
     
-    // MARK: GameInfoViewInterface
-    func update(gameInfo: GameInfoViewModel) {
+    // MARK: RunInfoViewInterface
+    func update(runInfo: RunInfoViewModel) {
         
-        nameLabel.text = gameInfo.gameName
+        nameLabel.text = runInfo.gameName
         playerTitleLabel.text = "user".localized()
-        playerNameLabel.text = gameInfo.userName
+        playerNameLabel.text = runInfo.userName
         timeTitleLabel.text = "time".localized()
-        timeLabel.text = gameInfo.time
+        timeLabel.text = runInfo.time
         videoButton.setTitle("video".localized(), for: .normal)
-        if let url = URL(string: gameInfo.logoUri) {
+        if let url = URL(string: runInfo.logoUri) {
             logoImageView.sd_setImage(with: url, placeholderImage: nil)
         }
     }
@@ -75,7 +75,7 @@ class GameInfoViewController : BaseViewController, GameInfoViewInterface {
             self.delegate?.viewLoaded()
         }
         
-        showAlert(title: "alertTitle".localized(), message: "alertGameInfoMessage".localized(), actions: [cancelAction, okAction])
+        showAlert(title: "alertTitle".localized(), message: "alertRunInfoMessage".localized(), actions: [cancelAction, okAction])
     }
     
     // MARK: - Private Methods

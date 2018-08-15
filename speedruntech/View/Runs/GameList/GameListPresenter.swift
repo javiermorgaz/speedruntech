@@ -15,7 +15,7 @@ public protocol GameListViewInterface: BaseViewControllerInterface {
 }
 
 public protocol GameListCoodinatorDelegate {
-    func presentGameInfo(game:Game)
+    func presentRunInfo(game:Game)
 }
 
 public class GameListPresenter : GameListViewControllerDelegate {
@@ -52,6 +52,6 @@ public class GameListPresenter : GameListViewControllerDelegate {
     }
     
     public func tapped(game:Game) {
-        delegate?.presentGameInfo(game: game)
+        delegate?.presentRunInfo(game: game)
     }
 }

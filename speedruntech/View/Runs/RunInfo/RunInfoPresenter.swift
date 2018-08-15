@@ -1,5 +1,5 @@
 //
-//  GameInfoPresenter.swift
+//  RunInfoPresenter.swift
 //  speedruntech
 //
 //  Created by Javier Morgaz García on 12/8/18.
@@ -8,27 +8,27 @@
 
 import UIKit
 
-public protocol GameInfoViewInterface: BaseViewControllerInterface {
+public protocol RunInfoViewInterface: BaseViewControllerInterface {
     
-    func update(gameInfo:GameInfoViewModel)
+    func update(runInfo:RunInfoViewModel)
     func updateFails()
 }
 
-public class GameInfoPresenter: GameInfoViewControllerDelegate {
+public class RunInfoPresenter: RunInfoViewControllerDelegate {
     
-    private let gameInfoViewController: GameInfoViewInterface
-    private let gameInfoUseCase: GameInfoUseCaseInterface
+    private let runInfoViewController: RunInfoViewInterface
+    private let runInfoUseCase: RunInfoUseCaseInterface
     
     private var game: Game
     private var run: Run?
     private var user: User?
     
-    public init(gameInfoViewController: GameInfoViewInterface,
-                gameInfoUseCase: GameInfoUseCaseInterface,
+    public init(runInfoViewController: RunInfoViewInterface,
+                runInfoUseCase: RunInfoUseCaseInterface,
                 game: Game) {
         
-        self.gameInfoViewController = gameInfoViewController
-        self.gameInfoUseCase = gameInfoUseCase
+        self.runInfoViewController = runInfoViewController
+        self.runInfoUseCase = runInfoUseCase
         self.game = game
     }
     
@@ -37,7 +37,7 @@ public class GameInfoPresenter: GameInfoViewControllerDelegate {
         updateViewModel()
     }
     
-    // MARK: - GameInfoViewControllerDelegate
+    // MARK: - RunInfoViewControllerDelegate
     public func showVideo() {
         if let run = run, let url = URL(string: run.videoUri) {
             if UIApplication.shared.canOpenURL(url) {
@@ -53,32 +53,32 @@ public class GameInfoPresenter: GameInfoViewControllerDelegate {
     // MARK: - Private Methods
     private func updateViewModel() {
     
-        gameInfoViewController.presentLoadingNotification()
+        runInfoViewController.presentLoadingNotification()
 
         guard let run = run else {
-            gameInfoUseCase.getRuns(gameId: game.gameId, success: { [weak self] runs in
+            runInfoUseCase.getRuns(gameId: game.gameId, success: { [weak self] runs in
                 guard let weakSelf = self else { return }
                 weakSelf.run = runs.first
                 weakSelf.updateViewModel()
                 
                 }, failure: { [weak self] in
                     guard let weakSelf = self else { return }
-                    weakSelf.gameInfoViewController.removeLoadingNotification()
-                    weakSelf.gameInfoViewController.updateFails()
+                    weakSelf.runInfoViewController.removeLoadingNotification()
+                    weakSelf.runInfoViewController.updateFails()
             })
             return
         }
         
         if user == nil, let playerId = run.playerId {
-            gameInfoUseCase.getUser(userId: playerId, success: { [weak self] user in
+            runInfoUseCase.getUser(userId: playerId, success: { [weak self] user in
                 guard let weakSelf = self else { return }
                 weakSelf.user = user
                 weakSelf.updateViewModel()
                 
                 }, failure: { [weak self] in
                     guard let weakSelf = self else { return }
-                    weakSelf.gameInfoViewController.removeLoadingNotification()
-                    weakSelf.gameInfoViewController.updateFails()
+                    weakSelf.runInfoViewController.removeLoadingNotification()
+                    weakSelf.runInfoViewController.updateFails()
             })
             return
         }
@@ -96,12 +96,12 @@ public class GameInfoPresenter: GameInfoViewControllerDelegate {
         }
         
         if let run = run {
-            let gameInfoModel = GameInfoViewModel(gameName: game.name,
+            let runInfoModel = RunInfoViewModel(gameName: game.name,
                                                   logoUri: game.logoUri,
                                                   userName: userName,
                                                   time: run.time)
-            gameInfoViewController.update(gameInfo: gameInfoModel)
+            runInfoViewController.update(runInfo: runInfoModel)
         }
-        gameInfoViewController.removeLoadingNotification()
+        runInfoViewController.removeLoadingNotification()
     }
 }

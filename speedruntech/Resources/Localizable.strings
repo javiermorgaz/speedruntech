@@ -10,12 +10,12 @@
 "navigationListTitle" = "Games";
 "alertGameListMessage"  = "Game list can't be downloaded at this moment";
 
-// GAME INFO
-"navigationInfoTitle" = "Game detail";
+// Run INFO
+"navigationInfoTitle" = "Run detail";
 "user" = "User:";
 "time" = "Time:";
 "video" = "Video";
-"alertGameInfoMessage"  = "Game Info can't be downloaded at this moment";
+"alertRunInfoMessage"  = "Run Info can't be downloaded at this moment";
 
 // Alert
 "alertCancel"   = "Cancel";

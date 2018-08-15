@@ -1,5 +1,5 @@
 //
-//  GameInfoUseCase.swift
+//  RunInfoUseCase.swift
 //  speedruntech
 //
 //  Created by Javier Morgaz García on 15/8/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol GameInfoUseCaseInterface: class {
+public protocol RunInfoUseCaseInterface: class {
     
     func getRuns(gameId:String,
                  success: @escaping (([Run]) -> Void),
@@ -19,7 +19,7 @@ public protocol GameInfoUseCaseInterface: class {
                  failure: @escaping (() -> Void))
 }
 
-class GameInfoUseCase: GameInfoUseCaseInterface {
+class RunInfoUseCase: RunInfoUseCaseInterface {
     
     private let restClient: RestClientInterface
     
