@@ -27,6 +27,7 @@ public struct Run : JsonDecodable {
     struct Keys {
         static let valueId = "id"
         static let players = "players"
+        static let name    = "name"
         static let videos  = "videos"
         static let links   = "links"
         static let uri     = "uri"
@@ -34,20 +35,23 @@ public struct Run : JsonDecodable {
         static let primary = "primary"
     }
     
-    public var runId:String     = ""
-    public var playerId:String  = ""
-    public var time:String      = ""
-    public var videoUri:String  = ""
+    public var runId:String       = ""
+    public var playerId:String?
+    public var playerName:String?
+    public var time:String        = ""
+    public var videoUri:String    = ""
     
     init(runId: String,
-         playerId: String,
+         playerId: String?,
+         playerName: String?,
          time:String,
          videoUri:String) {
         
-        self.runId     = runId
-        self.playerId  = playerId
-        self.time      = time
-        self.videoUri  = videoUri
+        self.runId      = runId
+        self.playerId   = playerId
+        self.playerName = playerName
+        self.time       = time
+        self.videoUri   = videoUri
     }
     
     // MARK: - JsonDecodable
@@ -59,9 +63,10 @@ public struct Run : JsonDecodable {
                 return nil
         }
         
-        var jsonTime     = ""
-        var jsonPlayerId = ""
-        var jsonVideoUri = ""
+        var jsonTime       = ""
+        var jsonPlayerId:String?
+        var jsonPlayerName:String?
+        var jsonVideoUri   = ""
         
         if let timesDictionary = dictionary[Keys.times] as? JsonDictionary {
             jsonTime = timesDictionary[Keys.primary] as? String ?? ""
@@ -69,7 +74,8 @@ public struct Run : JsonDecodable {
         
         if let playersArray = dictionary[Keys.players] as? [JsonDictionary],
             let playerDictionary = playersArray.first {
-            jsonPlayerId = playerDictionary[Keys.valueId] as? String ?? ""
+            jsonPlayerId = playerDictionary[Keys.valueId] as? String
+            jsonPlayerName = playerDictionary[Keys.name] as? String
         }
         
         if let videosDictionary = dictionary[Keys.videos] as? JsonDictionary,
@@ -78,6 +84,6 @@ public struct Run : JsonDecodable {
             jsonVideoUri = uriDictionary[Keys.uri] as? String ?? ""
         }
         
-        self.init(runId: jsonId, playerId:jsonPlayerId, time: jsonTime, videoUri: jsonVideoUri)
+        self.init(runId: jsonId, playerId:jsonPlayerId, playerName: jsonPlayerName, time: jsonTime, videoUri: jsonVideoUri)
     }
 }

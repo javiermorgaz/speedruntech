@@ -69,8 +69,8 @@ public class GameInfoPresenter: GameInfoViewControllerDelegate {
             return
         }
         
-        if user == nil {
-            gameInfoUseCase.getUser(userId: run.playerId, success: { [weak self] user in
+        if user == nil, let playerId = run.playerId {
+            gameInfoUseCase.getUser(userId: playerId, success: { [weak self] user in
                 guard let weakSelf = self else { return }
                 weakSelf.user = user
                 weakSelf.updateViewModel()
@@ -88,10 +88,17 @@ public class GameInfoPresenter: GameInfoViewControllerDelegate {
     
     private func updateInfoView() {
         
-        if let run = run, let user = user {
+        var userName = ""
+        if let playerName = run?.playerName {
+            userName = playerName
+        } else if let name = user?.name {
+            userName = name
+        }
+        
+        if let run = run {
             let gameInfoModel = GameInfoViewModel(gameName: game.name,
                                                   logoUri: game.logoUri,
-                                                  userName: user.name,
+                                                  userName: userName,
                                                   time: run.time)
             gameInfoViewController.update(gameInfo: gameInfoModel)
         }
