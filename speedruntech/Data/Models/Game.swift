@@ -49,8 +49,8 @@ public struct Game : JsonDecodable {
     // MARK: - JsonDecodable
     init?(jsonDictionary: JsonDictionary?) {
         
-        guard   let dictionary = jsonDictionary,
-            let jsonId      = dictionary[Game.Keys.gameId] as? String
+        guard let dictionary = jsonDictionary,
+            let jsonId      = dictionary[Keys.gameId] as? String
             else {
                 return nil
         }
@@ -58,16 +58,15 @@ public struct Game : JsonDecodable {
         var jsonName    = ""
         var jsonLogoUri = ""
         
-        if let nameDictionary = dictionary[Game.Keys.names] as? JsonDictionary {
-            jsonName = nameDictionary[Game.Keys.international] as? String ?? ""
+        if let nameDictionary = dictionary[Keys.names] as? JsonDictionary {
+            jsonName = nameDictionary[Keys.international] as? String ?? ""
         }
         
-        if let assetsDictionary = dictionary[Game.Keys.assets] as? JsonDictionary,
-            let logoDictionary = assetsDictionary[Game.Keys.logo] as? JsonDictionary{
-            jsonLogoUri = logoDictionary[Game.Keys.uri] as? String ?? ""
+        if let assetsDictionary = dictionary[Keys.assets] as? JsonDictionary,
+            let logoDictionary = assetsDictionary[Keys.logo] as? JsonDictionary {
+            jsonLogoUri = logoDictionary[Keys.uri] as? String ?? ""
         }
 
         self.init(gameId: jsonId, name: jsonName, logoUri: jsonLogoUri)
     }
-
 }

@@ -16,7 +16,7 @@ public protocol GameListUseCaseInterface: class {
 
 class GameListUseCase: GameListUseCaseInterface {
     
-    public let restClient: RestClientInterface
+    private let restClient: RestClientInterface
 
     public init(restClient: RestClientInterface) {
         self.restClient = restClient
@@ -25,7 +25,7 @@ class GameListUseCase: GameListUseCaseInterface {
     public func getGames(success: @escaping (([Game]) -> Void),
                          failure: @escaping (() -> Void)) {
         
-        let request = GameRouter.games(restClient.baseUrl)
+        let request = GameRouter.games(baseUrl: restClient.baseUrl)
         
         restClient.perform(request: request,success: { games in
             

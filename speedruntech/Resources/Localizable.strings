@@ -8,14 +8,18 @@
 
 // GAME LIST
 "navigationListTitle" = "Games";
+"alertGameListMessage"  = "Game list can't be downloaded at this moment";
 
 // GAME INFO
 "navigationInfoTitle" = "Game detail";
+"user" = "User:";
+"time" = "Time:";
+"video" = "Video";
+"alertGameInfoMessage"  = "Game Info can't be downloaded at this moment";
 
 // Alert
 "alertCancel"   = "Cancel";
 "alertRetry"    = "Retry";
-"alertMessage"  = "Game list can't be downloaded at this moment";
 "alertTitle"    = "Error";
 
 

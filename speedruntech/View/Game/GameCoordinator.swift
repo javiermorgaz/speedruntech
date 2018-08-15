@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameCoodinator {
+class GameCoodinator: Coordinator {
     
     // MARK: - Public attributes
     public var gameNavigationController = UINavigationController()
@@ -24,6 +24,15 @@ class GameCoodinator {
     
     private func presentGameList() {
         let gameListDependeces = GameListDependences()
-        gameNavigationController.show(gameListDependeces.GameListController(), sender: self)
+        gameNavigationController.show(gameListDependeces.GameListController(coordinator: self), sender: self)
     }
 }
+
+extension GameCoodinator:GameListCoodinatorDelegate {
+    
+    func presentGameInfo(game: Game) {
+        let gameInfoDependeces = GameInfoDependences()
+        gameNavigationController.show(gameInfoDependeces.GameInfoController(game:game), sender: self)
+    }
+}
+

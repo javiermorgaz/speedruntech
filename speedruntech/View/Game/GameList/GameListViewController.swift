@@ -53,7 +53,7 @@ class GameListViewController : BaseViewController, GameListViewInterface {
             self.delegate?.viewLoaded()
         }
         
-        showAlert(title: "alertTitle".localized(), message: "alertMessage".localized(), actions: [cancelAction, okAction])
+        showAlert(title: "alertTitle".localized(), message: "alertGameListMessage".localized(), actions: [cancelAction, okAction])
     }
 
     // MARK: Private Methods

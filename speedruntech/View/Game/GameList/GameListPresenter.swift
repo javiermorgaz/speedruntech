@@ -8,42 +8,50 @@
 
 import Foundation
 
-public protocol GameListViewInterface {
+public protocol GameListViewInterface: BaseViewControllerInterface {
     
     func update(gameList:[Game])
     func updateFails()
 }
 
+public protocol GameListCoodinatorDelegate {
+    func presentGameInfo(game:Game)
+}
+
 public class GameListPresenter : GameListViewControllerDelegate {
     
-    public let gameListViewController: GameListViewInterface
-    public let gameListUseCase: GameListUseCaseInterface
+    private let gameListViewController: GameListViewInterface
+    private let gameListUseCase: GameListUseCaseInterface
+    private var delegate:GameListCoodinatorDelegate?
     
-    public var gameList = [Game]()
+    private var gameList = [Game]()
     
     public init(gameListViewController: GameListViewInterface,
-                gameListUseCase: GameListUseCaseInterface) {
+                gameListUseCase: GameListUseCaseInterface,
+                coordinator: GameListCoodinatorDelegate) {
+        
         self.gameListViewController = gameListViewController
         self.gameListUseCase = gameListUseCase
+        self.delegate = coordinator
     }
     
     public func viewLoaded() {
         
+        gameListViewController.presentLoadingNotification()
         gameListUseCase.getGames(success: { [weak self] games in
-            guard let weakSelf = self else {
-                return
-            }
-            weakSelf.gameListViewController.update(gameList: games)
             
+            guard let weakSelf = self else { return }
+            weakSelf.gameListViewController.update(gameList: games)
+            weakSelf.gameListViewController.removeLoadingNotification()
         }, failure: { [weak self] in
-            guard let weakSelf = self else {
-                return
-            }
+            
+            guard let weakSelf = self else { return }
+            weakSelf.gameListViewController.removeLoadingNotification()
             weakSelf.gameListViewController.updateFails()
         })
     }
     
     public func tapped(game:Game) {
-        
+        delegate?.presentGameInfo(game: game)
     }
 }
