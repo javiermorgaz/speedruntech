@@ -21,7 +21,7 @@ public protocol RestClientInterface: class {
 
 class RestClient: RestClientInterface {
     
-    let baseUrl: String
+    internal var baseUrl: String
     
     public init(baseUrl: String) {
         self.baseUrl = baseUrl
@@ -30,8 +30,6 @@ class RestClient: RestClientInterface {
     func perform<R:URLRequestConvertible>(request: R,
                                           success: @escaping ((Any) -> Void),
                                           failure: @escaping (() -> Void)) {
-        
-        print(request: request)
         
         Alamofire.request(request).validate(statusCode: 200..<401).responseJSON { response in
             

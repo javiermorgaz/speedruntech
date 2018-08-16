@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		024E4F00F1958C680267BE49 /* Pods_speedruntech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6547A694395A0800F39D9DC7 /* Pods_speedruntech.framework */; };
-		29222705211EC7E200F4901D /* speedruntechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222704211EC7E200F4901D /* speedruntechTests.swift */; };
+		29222705211EC7E200F4901D /* gameListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222704211EC7E200F4901D /* gameListUseCaseTests.swift */; };
 		29222711211ECFA600F4901D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222710211ECFA600F4901D /* AppDelegate.swift */; };
 		29222719211ED05200F4901D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29222713211ED05200F4901D /* Assets.xcassets */; };
 		2922271A211ED05200F4901D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29222714211ED05200F4901D /* LaunchScreen.storyboard */; };
@@ -32,10 +32,13 @@
 		2923159321240318003A6D24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923159221240318003A6D24 /* User.swift */; };
 		29231595212406DE003A6D24 /* RunInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29231594212406DE003A6D24 /* RunInfoUseCase.swift */; };
 		292315972124363A003A6D24 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292315962124363A003A6D24 /* Coordinator.swift */; };
+		292315B32125FCAC003A6D24 /* Mocks in Resources */ = {isa = PBXBuildFile; fileRef = 292315B22125FCAC003A6D24 /* Mocks */; };
 		296210162121F12900BA06C3 /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296210152121F12900BA06C3 /* GameListTableViewCell.swift */; };
 		296210182121F51A00BA06C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296210172121F51A00BA06C3 /* Localizable.strings */; };
 		2962101A2121F6A000BA06C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296210192121F6A000BA06C3 /* String.swift */; };
 		2962104C2123F77900BA06C3 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2962104B2123F77900BA06C3 /* Run.swift */; };
+		296BB6C12126021900D37606 /* runInfoUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BB6C02126021900D37606 /* runInfoUseCaseTests.swift */; };
+		296BB6C62126027900D37606 /* RestClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BB6C52126027900D37606 /* RestClientStub.swift */; };
 		3BEB5AF67EFE02BF2F5E4988 /* Pods_speedruntechTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185FEB9B546363795E69DC82 /* Pods_speedruntechTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +56,7 @@
 		185FEB9B546363795E69DC82 /* Pods_speedruntechTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedruntechTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		292226EC211EC7E100F4901D /* speedruntech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speedruntech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29222700211EC7E200F4901D /* speedruntechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speedruntechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		29222704211EC7E200F4901D /* speedruntechTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speedruntechTests.swift; sourceTree = "<group>"; };
+		29222704211EC7E200F4901D /* gameListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameListUseCaseTests.swift; sourceTree = "<group>"; };
 		29222706211EC7E200F4901D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29222710211ECFA600F4901D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29222713211ED05200F4901D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,10 +82,13 @@
 		2923159221240318003A6D24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		29231594212406DE003A6D24 /* RunInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunInfoUseCase.swift; sourceTree = "<group>"; };
 		292315962124363A003A6D24 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		292315B22125FCAC003A6D24 /* Mocks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mocks; sourceTree = "<group>"; };
 		296210152121F12900BA06C3 /* GameListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
 		296210172121F51A00BA06C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		296210192121F6A000BA06C3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2962104B2123F77900BA06C3 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		296BB6C02126021900D37606 /* runInfoUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runInfoUseCaseTests.swift; sourceTree = "<group>"; };
+		296BB6C52126027900D37606 /* RestClientStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientStub.swift; sourceTree = "<group>"; };
 		6547A694395A0800F39D9DC7 /* Pods_speedruntech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedruntech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77ADE78C8802448F92B8A46C /* Pods-speedruntech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedruntech.release.xcconfig"; path = "Pods/Target Support Files/Pods-speedruntech/Pods-speedruntech.release.xcconfig"; sourceTree = "<group>"; };
 		993B4FE014D0D9A9BD8CD1E2 /* Pods-speedruntechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedruntechTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-speedruntechTests/Pods-speedruntechTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +152,11 @@
 		29222703211EC7E200F4901D /* speedruntechTests */ = {
 			isa = PBXGroup;
 			children = (
-				29222704211EC7E200F4901D /* speedruntechTests.swift */,
+				292315B22125FCAC003A6D24 /* Mocks */,
+				296BB6C42126027900D37606 /* Stubs */,
 				29222706211EC7E200F4901D /* Info.plist */,
+				29222704211EC7E200F4901D /* gameListUseCaseTests.swift */,
+				296BB6C02126021900D37606 /* runInfoUseCaseTests.swift */,
 			);
 			path = speedruntechTests;
 			sourceTree = "<group>";
@@ -302,6 +311,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		296BB6C42126027900D37606 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				296BB6C52126027900D37606 /* RestClientStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		493C7B372AB288A645FF1C73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292315B32125FCAC003A6D24 /* Mocks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +538,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29222705211EC7E200F4901D /* speedruntechTests.swift in Sources */,
+				296BB6C12126021900D37606 /* runInfoUseCaseTests.swift in Sources */,
+				29222705211EC7E200F4901D /* gameListUseCaseTests.swift in Sources */,
+				296BB6C62126027900D37606 /* RestClientStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

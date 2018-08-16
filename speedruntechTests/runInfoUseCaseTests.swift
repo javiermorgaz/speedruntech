@@ -1,15 +1,14 @@
 //
-//  speedruntechTests.swift
+//  runInfoUseCaseTests.swift
 //  speedruntechTests
 //
-//  Created by Javier Morgaz García on 11/8/18.
+//  Created by Javier Morgaz García on 16/8/18.
 //  Copyright © 2018 Javier Morgaz García. All rights reserved.
 //
 
 import XCTest
-@testable import speedruntech
 
-class speedruntechTests: XCTestCase {
+class runInfoUseCaseTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
