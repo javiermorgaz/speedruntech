@@ -12,7 +12,7 @@ public class GameListDependences {
     
     public init() {}
     
-    public func gameListController(coordinator: GameListCoodinatorDelegate) -> UIViewController {
+    public func gameListController(coordinator: GameListCoodinator) -> UIViewController {
         
         let gameListViewController = GameListViewController.instantiate(fromAppStoryboard: .game)
         let gameListUseCase = GameListUseCase(restClient: CoreDependences.sharedInstance.restClient)

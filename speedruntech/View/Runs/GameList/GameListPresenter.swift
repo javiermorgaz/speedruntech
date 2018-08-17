@@ -14,7 +14,7 @@ public protocol GameListViewInterface: BaseViewControllerInterface {
     func updateFails()
 }
 
-public protocol GameListCoodinatorDelegate: class {
+public protocol GameListCoodinator: class {
     func presentRunInfo(game: Game)
 }
 
@@ -22,17 +22,17 @@ public class GameListPresenter: GameListViewControllerDelegate {
     
     private let gameListViewController: GameListViewInterface
     private let gameListUseCase: GameListUseCaseInterface
-    private weak var delegate: GameListCoodinatorDelegate?
+    private var gameListCoodinator: GameListCoodinator?
     
     private var gameList = [Game]()
     
     public init(gameListViewController: GameListViewInterface,
                 gameListUseCase: GameListUseCaseInterface,
-                coordinator: GameListCoodinatorDelegate) {
+                coordinator: GameListCoodinator) {
         
         self.gameListViewController = gameListViewController
         self.gameListUseCase = gameListUseCase
-        self.delegate = coordinator
+        self.gameListCoodinator = coordinator
     }
     
     public func viewLoaded() {
@@ -52,6 +52,6 @@ public class GameListPresenter: GameListViewControllerDelegate {
     }
     
     public func tapped(game: Game) {
-        delegate?.presentRunInfo(game: game)
+        gameListCoodinator?.presentRunInfo(game: game)
     }
 }
