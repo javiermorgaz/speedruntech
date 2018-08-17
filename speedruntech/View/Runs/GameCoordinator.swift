@@ -28,7 +28,7 @@ class GameCoodinator: Coordinator {
     }
 }
 
-extension GameCoodinator: GameListCoodinatorDelegate {
+extension GameCoodinator: GameListCoodinator {
     
     func presentRunInfo(game: Game) {
         let runInfoDependeces = RunInfoDependences()
