@@ -1,0 +1,78 @@
+{
+      "id": "zgn5p70y",
+      "weblink": "https://www.speedrun.com/007_Racing/run/zgn5p70y",
+      "game": "o1y93e46",
+      "level": "gdrx1r6d",
+      "category": "wdmwy6e2",
+      "videosKO": {
+        "links": [
+          {
+            "uri": "https://www.twitch.tv/videos/254386225"
+          }
+        ]
+      },
+      "comment": "Not bad :D",
+      "status": {
+        "status": "verified",
+        "examiner": "qjogd7ex",
+        "verify-date": "2018-04-25T17:50:49Z"
+      },
+      "players": [
+        {
+          "rel": "user",
+          "id": "qjogd7ex",
+          "uri": "https://www.speedrun.com/api/v1/users/qjogd7ex"
+        }
+      ],
+      "date": "2018-04-25",
+      "submitted": "2018-04-25T17:50:49Z",
+      "times": {
+        "primary": "PT1M9.790S",
+        "primary_t": 69.79,
+        "realtime": "PT1M9.790S",
+        "realtime_t": 69.79,
+        "realtime_noloads": null,
+        "realtime_noloads_t": 0,
+        "ingame": null,
+        "ingame_t": 0
+      },
+      "system": {
+        "platform": "n5e17e27",
+        "emulated": false,
+        "region": "pr184lqn"
+      },
+      "splits": null,
+      "values": {
+        
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "https://www.speedrun.com/api/v1/runs/zgn5p70y"
+        },
+        {
+          "rel": "game",
+          "uri": "https://www.speedrun.com/api/v1/games/o1y93e46"
+        },
+        {
+          "rel": "category",
+          "uri": "https://www.speedrun.com/api/v1/categories/wdmwy6e2"
+        },
+        {
+          "rel": "level",
+          "uri": "https://www.speedrun.com/api/v1/levels/gdrx1r6d"
+        },
+        {
+          "rel": "platform",
+          "uri": "https://www.speedrun.com/api/v1/platforms/n5e17e27"
+        },
+        {
+          "rel": "region",
+          "uri": "https://www.speedrun.com/api/v1/regions/pr184lqn"
+        },
+        {
+          "rel": "examiner",
+          "uri": "https://www.speedrun.com/api/v1/users/qjogd7ex"
+        }
+      ]
+}

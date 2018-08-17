@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  speedruntech
+
+  Created by Javier Morgaz García on 13/8/18.
+  Copyright © 2018 Javier Morgaz García. All rights reserved.
+*/
+
+// GAME LIST
+"navigationListTitle" = "Games";
+"alertGameListMessage"  = "Game list can't be downloaded at this moment";
+
+// Run INFO
+"navigationInfoTitle" = "Run detail";
+"user" = "User:";
+"time" = "Time:";
+"video" = "Video";
+"alertRunInfoMessage"  = "Run Info can't be downloaded at this moment";
+"alertVideoMessage" = "Cann't open the video at this moment";
+
+// Alert
+"alertCancel"   = "Cancel";
+"alertOk"       = "Ok";
+"alertRetry"    = "Retry";
+"alertTitle"    = "Error";
+
+
+
