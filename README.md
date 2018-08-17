@@ -46,4 +46,4 @@ Tests can be run from the Tests navigation tab.
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the [MIT License](https://github.com/javiermorgaz/speedruntech/blob/master/LICENSE)
