@@ -46,7 +46,7 @@ enum GameRouter: URLRequestConvertible {
         switch self {
         case .games: return try Alamofire.URLEncoding.default.encode(urlRequest, with: nil)
         case .runs(_, let gameId):
-            let params:Parameters = [RouterKeys.game : gameId]
+            let params: Parameters = [RouterKeys.game: gameId]
             return try Alamofire.URLEncoding.queryString.encode(urlRequest, with: params)
         case .users: return try Alamofire.URLEncoding.default.encode(urlRequest, with: nil)
         }

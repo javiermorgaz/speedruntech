@@ -27,7 +27,7 @@ class GameListUseCase: GameListUseCaseInterface {
         
         let request = GameRouter.games(baseUrl: restClient.baseUrl)
         
-        restClient.perform(request: request,success: { games in
+        restClient.perform(request: request, success: { games in
             
             if let gamesDictionary = Games(array: games as? [JsonDictionary]) {
                 success(gamesDictionary.games)

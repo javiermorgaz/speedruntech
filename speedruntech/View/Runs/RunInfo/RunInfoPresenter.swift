@@ -10,8 +10,9 @@ import UIKit
 
 public protocol RunInfoViewInterface: BaseViewControllerInterface {
     
-    func update(runInfo:RunInfoViewModel)
+    func update(runInfo: RunInfoViewModel)
     func updateFails()
+    func openVideoFails()
 }
 
 public class RunInfoPresenter: RunInfoViewControllerDelegate {
@@ -39,13 +40,9 @@ public class RunInfoPresenter: RunInfoViewControllerDelegate {
     
     // MARK: - RunInfoViewControllerDelegate
     public func showVideo() {
-        if let run = run, let url = URL(string: run.videoUri) {
-            if UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
+        if let run = run {
+            if !runInfoUseCase.openVideoFrom(run: run) {
+                runInfoViewController.updateFails()
             }
         }
     }

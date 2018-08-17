@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct User : JsonDecodable {
+public struct User: JsonDecodable {
     
     struct Keys {
         static let userId           = "id"
@@ -16,11 +16,11 @@ public struct User : JsonDecodable {
         static let international    = "international"
     }
     
-    public var userId:String    = ""
-    public var name:String      = ""
+    public var userId: String    = ""
+    public var name: String      = ""
     
     init(userId: String,
-         name:String) {
+         name: String) {
         
         self.userId     = userId
         self.name       = name

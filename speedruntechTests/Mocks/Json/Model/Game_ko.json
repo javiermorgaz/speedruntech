@@ -1,8 +1,6 @@
-{
-  "data": [
-    {
+   {
       "id": "k6qqkx6g",
-      "names": {
+      "namesKO": {
         "international": "! Fishy !",
         "japanese": null,
         "twitch": "! Fishy !"
@@ -148,16 +146,3 @@
         }
       ]
     }
-  ],
-  "pagination": {
-    "offset": 0,
-    "max": 20,
-    "size": 20,
-    "links": [
-      {
-        "rel": "next",
-        "uri": "https://www.speedrun.com/api/v1/games?offset=20"
-      }
-    ]
-  }
-}

@@ -22,7 +22,7 @@ public struct Games: ArrayJSONDecodable {
     }
 }
 
-public struct Game : JsonDecodable {
+public struct Game: JsonDecodable {
  
     struct Keys {
         static let gameId           = "id"
@@ -33,13 +33,13 @@ public struct Game : JsonDecodable {
         static let uri              = "uri"
     }
     
-    public var gameId:String    = ""
-    public var name:String      = ""
-    public var logoUri:String   = ""
+    public var gameId: String    = ""
+    public var name: String      = ""
+    public var logoUri: String   = ""
     
     init(gameId: String,
-         name:String,
-         logoUri:String) {
+         name: String,
+         logoUri: String) {
         
         self.gameId     = gameId
         self.name       = name

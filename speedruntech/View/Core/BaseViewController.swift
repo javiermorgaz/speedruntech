@@ -17,7 +17,7 @@ public protocol BaseViewControllerInterface {
 
 class BaseViewController: UIViewController, BaseViewControllerInterface {
 
-    private var loadingActivity:MBProgressHUD?
+    private var loadingActivity: MBProgressHUD?
     
     required init?(coder aDecoder: NSCoder) { //THIS PREVENTS THAT WHEN A BASEVIEWCONTROLLER IS NOT CREATED FROM STORYBOARD
         super.init(coder: aDecoder)
@@ -30,7 +30,7 @@ class BaseViewController: UIViewController, BaseViewControllerInterface {
     }
     
     // MARK: - Public
-    public func setTitle(title:String) {
+    public func setTitle(title: String) {
         navigationItem.titleView = nil
         self.title = title
     }

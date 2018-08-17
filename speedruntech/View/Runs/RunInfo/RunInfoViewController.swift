@@ -11,6 +11,7 @@ import UIKit
 import SDWebImage
 
 public struct RunInfoViewModel {
+    
     let gameName: String
     let logoUri: String
     let userName: String
@@ -23,7 +24,7 @@ public protocol RunInfoViewControllerDelegate: class {
     func showVideo()
 }
 
-class RunInfoViewController : BaseViewController, RunInfoViewInterface {
+class RunInfoViewController: BaseViewController, RunInfoViewInterface {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -71,11 +72,16 @@ class RunInfoViewController : BaseViewController, RunInfoViewInterface {
     func updateFails() {
         
         let cancelAction = UIAlertAction(title: "alertCancel".localized(), style: .cancel) { _ in }
-        let okAction = UIAlertAction(title: "alertRetry".localized(), style: .default) { _ in
+        let retryAction = UIAlertAction(title: "alertRetry".localized(), style: .default) { _ in
             self.delegate?.viewLoaded()
         }
+        showAlert(title: "alertTitle".localized(), message: "alertRunInfoMessage".localized(), actions: [cancelAction, retryAction])
+    }
+    
+    func openVideoFails() {
         
-        showAlert(title: "alertTitle".localized(), message: "alertRunInfoMessage".localized(), actions: [cancelAction, okAction])
+        let okAction = UIAlertAction(title: "alertOk".localized(), style: .default) { _ in }
+        showAlert(title: "alertTitle".localized(), message: "alertVideoMessage".localized(), actions: [okAction])
     }
     
     // MARK: - Private Methods

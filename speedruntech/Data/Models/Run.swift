@@ -22,7 +22,7 @@ public struct Runs: ArrayJSONDecodable {
     }
 }
 
-public struct Run : JsonDecodable {
+public struct Run: JsonDecodable {
     
     struct Keys {
         static let valueId = "id"
@@ -35,17 +35,17 @@ public struct Run : JsonDecodable {
         static let primary = "primary"
     }
     
-    public var runId:String       = ""
-    public var playerId:String?
-    public var playerName:String?
-    public var time:String        = ""
-    public var videoUri:String    = ""
+    public var runId: String       = ""
+    public var playerId: String?
+    public var playerName: String?
+    public var time: String        = ""
+    public var videoUri: String    = ""
     
     init(runId: String,
          playerId: String?,
          playerName: String?,
-         time:String,
-         videoUri:String) {
+         time: String,
+         videoUri: String) {
         
         self.runId      = runId
         self.playerId   = playerId
@@ -64,8 +64,8 @@ public struct Run : JsonDecodable {
         }
         
         var jsonTime       = ""
-        var jsonPlayerId:String?
-        var jsonPlayerName:String?
+        var jsonPlayerId: String?
+        var jsonPlayerName: String?
         var jsonVideoUri   = ""
         
         if let timesDictionary = dictionary[Keys.times] as? JsonDictionary {
@@ -84,6 +84,6 @@ public struct Run : JsonDecodable {
             jsonVideoUri = uriDictionary[Keys.uri] as? String ?? ""
         }
         
-        self.init(runId: jsonId, playerId:jsonPlayerId, playerName: jsonPlayerName, time: jsonTime, videoUri: jsonVideoUri)
+        self.init(runId: jsonId, playerId: jsonPlayerId, playerName: jsonPlayerName, time: jsonTime, videoUri: jsonVideoUri)
     }
 }

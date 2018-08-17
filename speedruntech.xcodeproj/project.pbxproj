@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		024E4F00F1958C680267BE49 /* Pods_speedruntech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6547A694395A0800F39D9DC7 /* Pods_speedruntech.framework */; };
-		29222705211EC7E200F4901D /* gameListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222704211EC7E200F4901D /* gameListUseCaseTests.swift */; };
+		29222705211EC7E200F4901D /* GameListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222704211EC7E200F4901D /* GameListUseCaseTests.swift */; };
 		29222711211ECFA600F4901D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222710211ECFA600F4901D /* AppDelegate.swift */; };
 		29222719211ED05200F4901D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29222713211ED05200F4901D /* Assets.xcassets */; };
 		2922271A211ED05200F4901D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29222714211ED05200F4901D /* LaunchScreen.storyboard */; };
 		29222726211EE11200F4901D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222725211EE11100F4901D /* BaseViewController.swift */; };
-		2922272C211EE89500F4901D /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29222728211EE89500F4901D /* Game.storyboard */; };
+		2922272C211EE89500F4901D /* game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29222728211EE89500F4901D /* game.storyboard */; };
 		2922272E211EECBD00F4901D /* GameListDependeces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2922272D211EECBD00F4901D /* GameListDependeces.swift */; };
 		29222730211EF61E00F4901D /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2922272F211EF61E00F4901D /* AppStoryboard.swift */; };
 		29222732211EF67600F4901D /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29222731211EF67600F4901D /* GameCoordinator.swift */; };
@@ -33,11 +33,15 @@
 		29231595212406DE003A6D24 /* RunInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29231594212406DE003A6D24 /* RunInfoUseCase.swift */; };
 		292315972124363A003A6D24 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292315962124363A003A6D24 /* Coordinator.swift */; };
 		292315B32125FCAC003A6D24 /* Mocks in Resources */ = {isa = PBXBuildFile; fileRef = 292315B22125FCAC003A6D24 /* Mocks */; };
+		29402D5B2126A54400CF0FAD /* ModelsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29402D5A2126A54400CF0FAD /* ModelsTest.swift */; };
+		29402D5E2126A72000CF0FAD /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29402D5D2126A72000CF0FAD /* TestUtils.swift */; };
+		295222A22126CA8200EF0B5C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 295222A12126CA8000EF0B5C /* .swiftlint.yml */; };
+		295222A42126D1E400EF0B5C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295222A32126D1E400EF0B5C /* AppEnvironment.swift */; };
 		296210162121F12900BA06C3 /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296210152121F12900BA06C3 /* GameListTableViewCell.swift */; };
 		296210182121F51A00BA06C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296210172121F51A00BA06C3 /* Localizable.strings */; };
 		2962101A2121F6A000BA06C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296210192121F6A000BA06C3 /* String.swift */; };
 		2962104C2123F77900BA06C3 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2962104B2123F77900BA06C3 /* Run.swift */; };
-		296BB6C12126021900D37606 /* runInfoUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BB6C02126021900D37606 /* runInfoUseCaseTests.swift */; };
+		296BB6C12126021900D37606 /* RunInfoUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BB6C02126021900D37606 /* RunInfoUseCaseTests.swift */; };
 		296BB6C62126027900D37606 /* RestClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296BB6C52126027900D37606 /* RestClientStub.swift */; };
 		3BEB5AF67EFE02BF2F5E4988 /* Pods_speedruntechTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185FEB9B546363795E69DC82 /* Pods_speedruntechTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,14 +60,14 @@
 		185FEB9B546363795E69DC82 /* Pods_speedruntechTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedruntechTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		292226EC211EC7E100F4901D /* speedruntech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speedruntech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29222700211EC7E200F4901D /* speedruntechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speedruntechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		29222704211EC7E200F4901D /* gameListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameListUseCaseTests.swift; sourceTree = "<group>"; };
+		29222704211EC7E200F4901D /* GameListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListUseCaseTests.swift; sourceTree = "<group>"; };
 		29222706211EC7E200F4901D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29222710211ECFA600F4901D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29222713211ED05200F4901D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29222715211ED05200F4901D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29222718211ED05200F4901D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29222725211EE11100F4901D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		29222729211EE89500F4901D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
+		29222729211EE89500F4901D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/game.storyboard; sourceTree = "<group>"; };
 		2922272D211EECBD00F4901D /* GameListDependeces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListDependeces.swift; sourceTree = "<group>"; };
 		2922272F211EF61E00F4901D /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		29222731211EF67600F4901D /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
@@ -83,11 +87,15 @@
 		29231594212406DE003A6D24 /* RunInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunInfoUseCase.swift; sourceTree = "<group>"; };
 		292315962124363A003A6D24 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		292315B22125FCAC003A6D24 /* Mocks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mocks; sourceTree = "<group>"; };
+		29402D5A2126A54400CF0FAD /* ModelsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTest.swift; sourceTree = "<group>"; };
+		29402D5D2126A72000CF0FAD /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		295222A12126CA8000EF0B5C /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		295222A32126D1E400EF0B5C /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		296210152121F12900BA06C3 /* GameListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
 		296210172121F51A00BA06C3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		296210192121F6A000BA06C3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		2962104B2123F77900BA06C3 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
-		296BB6C02126021900D37606 /* runInfoUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runInfoUseCaseTests.swift; sourceTree = "<group>"; };
+		296BB6C02126021900D37606 /* RunInfoUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunInfoUseCaseTests.swift; sourceTree = "<group>"; };
 		296BB6C52126027900D37606 /* RestClientStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientStub.swift; sourceTree = "<group>"; };
 		6547A694395A0800F39D9DC7 /* Pods_speedruntech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_speedruntech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77ADE78C8802448F92B8A46C /* Pods-speedruntech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-speedruntech.release.xcconfig"; path = "Pods/Target Support Files/Pods-speedruntech/Pods-speedruntech.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,9 +162,11 @@
 			children = (
 				292315B22125FCAC003A6D24 /* Mocks */,
 				296BB6C42126027900D37606 /* Stubs */,
+				29402D5C2126A6A800CF0FAD /* Utils */,
 				29222706211EC7E200F4901D /* Info.plist */,
-				29222704211EC7E200F4901D /* gameListUseCaseTests.swift */,
-				296BB6C02126021900D37606 /* runInfoUseCaseTests.swift */,
+				29222704211EC7E200F4901D /* GameListUseCaseTests.swift */,
+				296BB6C02126021900D37606 /* RunInfoUseCaseTests.swift */,
+				29402D5A2126A54400CF0FAD /* ModelsTest.swift */,
 			);
 			path = speedruntechTests;
 			sourceTree = "<group>";
@@ -165,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				29222710211ECFA600F4901D /* AppDelegate.swift */,
+				295222A32126D1E400EF0B5C /* AppEnvironment.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -176,6 +187,7 @@
 				29222714211ED05200F4901D /* LaunchScreen.storyboard */,
 				29222718211ED05200F4901D /* Info.plist */,
 				296210172121F51A00BA06C3 /* Localizable.strings */,
+				295222A12126CA8000EF0B5C /* .swiftlint.yml */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,7 +232,7 @@
 		29222727211EE89500F4901D /* Runs */ = {
 			isa = PBXGroup;
 			children = (
-				29222728211EE89500F4901D /* Game.storyboard */,
+				29222728211EE89500F4901D /* game.storyboard */,
 				29222731211EF67600F4901D /* GameCoordinator.swift */,
 				2922272A211EE89500F4901D /* GameList */,
 				2922272B211EE89500F4901D /* RunInfo */,
@@ -303,6 +315,14 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
+		29402D5C2126A6A800CF0FAD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				29402D5D2126A72000CF0FAD /* TestUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		296210142121F10800BA06C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +367,7 @@
 			buildConfigurationList = 29222709211EC7E200F4901D /* Build configuration list for PBXNativeTarget "speedruntech" */;
 			buildPhases = (
 				CCCDC6CBE8B280A66E1D4DAC /* [CP] Check Pods Manifest.lock */,
+				295222A02126C7BB00EF0B5C /* Swiftlint */,
 				292226E8211EC7E100F4901D /* Sources */,
 				292226E9211EC7E100F4901D /* Frameworks */,
 				292226EA211EC7E100F4901D /* Resources */,
@@ -423,7 +444,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2922272C211EE89500F4901D /* Game.storyboard in Resources */,
+				295222A22126CA8200EF0B5C /* .swiftlint.yml in Resources */,
+				2922272C211EE89500F4901D /* game.storyboard in Resources */,
 				296210182121F51A00BA06C3 /* Localizable.strings in Resources */,
 				29222719211ED05200F4901D /* Assets.xcassets in Resources */,
 				2922271A211ED05200F4901D /* LaunchScreen.storyboard in Resources */,
@@ -458,6 +480,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		295222A02126C7BB00EF0B5C /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		84ECF36F07C25AC47EAE1CBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -513,6 +549,7 @@
 				2922274D2120495500F4901D /* RunInfoDependences.swift in Sources */,
 				29222749212048E700F4901D /* RunInfoPresenter.swift in Sources */,
 				2923159321240318003A6D24 /* User.swift in Sources */,
+				295222A42126D1E400EF0B5C /* AppEnvironment.swift in Sources */,
 				296210162121F12900BA06C3 /* GameListTableViewCell.swift in Sources */,
 				29222730211EF61E00F4901D /* AppStoryboard.swift in Sources */,
 				2922272E211EECBD00F4901D /* GameListDependeces.swift in Sources */,
@@ -538,9 +575,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				296BB6C12126021900D37606 /* runInfoUseCaseTests.swift in Sources */,
-				29222705211EC7E200F4901D /* gameListUseCaseTests.swift in Sources */,
+				296BB6C12126021900D37606 /* RunInfoUseCaseTests.swift in Sources */,
+				29222705211EC7E200F4901D /* GameListUseCaseTests.swift in Sources */,
 				296BB6C62126027900D37606 /* RestClientStub.swift in Sources */,
+				29402D5E2126A72000CF0FAD /* TestUtils.swift in Sources */,
+				29402D5B2126A54400CF0FAD /* ModelsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,12 +602,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		29222728211EE89500F4901D /* Game.storyboard */ = {
+		29222728211EE89500F4901D /* game.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				29222729211EE89500F4901D /* Base */,
 			);
-			name = Game.storyboard;
+			name = game.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

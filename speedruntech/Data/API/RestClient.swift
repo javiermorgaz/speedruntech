@@ -14,9 +14,9 @@ public protocol RestClientInterface: class {
     
     var baseUrl: String { get }
     
-    func perform<R:URLRequestConvertible>(request: R,
-                 success succeed : @escaping ((Any) -> Void),
-                 failure failed : @escaping (() -> Void))
+    func perform<R: URLRequestConvertible>(request: R,
+                                           success succeed: @escaping ((Any) -> Void),
+                                           failure failed: @escaping (() -> Void))
 }
 
 class RestClient: RestClientInterface {
@@ -27,9 +27,9 @@ class RestClient: RestClientInterface {
         self.baseUrl = baseUrl
     }
     
-    func perform<R:URLRequestConvertible>(request: R,
-                                          success: @escaping ((Any) -> Void),
-                                          failure: @escaping (() -> Void)) {
+    func perform<R: URLRequestConvertible>(request: R,
+                                           success: @escaping ((Any) -> Void),
+                                           failure: @escaping (() -> Void)) {
         
         Alamofire.request(request).validate(statusCode: 200..<401).responseJSON { response in
             
@@ -46,7 +46,7 @@ class RestClient: RestClientInterface {
                     failure()
                 }
                 
-            case .failure( _ ):
+            case .failure:
                 
                 self.printError(response: response)
                 failure()
@@ -54,7 +54,7 @@ class RestClient: RestClientInterface {
         }
     }
     
-    func print<R:URLRequestConvertible>(request:R) {
+    func print<R: URLRequestConvertible>(request: R) {
         
         DDLogInfo("\n🔻 ↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
         DDLogInfo("Starting Request...")
@@ -90,7 +90,6 @@ class RestClient: RestClientInterface {
         DDLogError("\n\(response.debugDescription)")
         DDLogError("\n❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌ 🔺\n")
     }
-    
     
     func printParsingError(response: DataResponse<Any>) {
         DDLogError("\n🔻 ❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌")

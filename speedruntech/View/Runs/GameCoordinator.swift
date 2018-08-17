@@ -24,15 +24,14 @@ class GameCoodinator: Coordinator {
     
     private func presentGameList() {
         let gameListDependeces = GameListDependences()
-        gameNavigationController.show(gameListDependeces.GameListController(coordinator: self), sender: self)
+        gameNavigationController.show(gameListDependeces.gameListController(coordinator: self), sender: self)
     }
 }
 
-extension GameCoodinator:GameListCoodinatorDelegate {
+extension GameCoodinator: GameListCoodinatorDelegate {
     
     func presentRunInfo(game: Game) {
         let runInfoDependeces = RunInfoDependences()
-        gameNavigationController.show(runInfoDependeces.RunInfoController(game:game), sender: self)
+        gameNavigationController.show(runInfoDependeces.runInfoController(game: game), sender: self)
     }
 }
-

@@ -1,0 +1,68 @@
+{
+  "id": "y8dwelj6",
+  "names": {
+    "international": "PurpleSun",
+    "japanese": null
+  },
+  "weblink": "https://www.speedrun.com/user/PurpleSun",
+  "name-style": {
+    "style": "gradient",
+    "color-from": {
+      "light": "#900090",
+      "dark": "#A010A0"
+    },
+    "color-to": {
+      "light": "#900090",
+      "dark": "#A010A0"
+    }
+  },
+  "role": "user",
+  "signup": "2014-08-12T15:59:29Z",
+  "location": {
+    "country": {
+      "code": "gb/eng",
+      "names": {
+        "international": "England",
+        "japanese": null
+      }
+    },
+    "region": {
+      "code": "gb/eng/cam",
+      "names": {
+        "international": "Cambridgeshire, England",
+        "japanese": null
+      }
+    }
+  },
+  "twitch": {
+    "uri": "https://www.twitch.tv/PurpleSun"
+  },
+  "hitbox": null,
+  "youtube": {
+    "uri": "https://www.youtube.com/channel/UCyxsDlkuNy-MCPEuXIi7lGg"
+  },
+  "twitter": {
+    "uri": "https://www.twitter.com/PurpleSunSR"
+  },
+  "speedrunslive": {
+    "uri": "http://www.speedrunslive.com/profiles/#!/PurpleSunDeryl"
+  },
+  "links": [
+    {
+      "rel": "self",
+      "uri": "https://www.speedrun.com/api/v1/users/y8dwelj6"
+    },
+    {
+      "rel": "runs",
+      "uri": "https://www.speedrun.com/api/v1/runs?user=y8dwelj6"
+    },
+    {
+      "rel": "games",
+      "uri": "https://www.speedrun.com/api/v1/games?moderator=y8dwelj6"
+    },
+    {
+      "rel": "personal-bests",
+      "uri": "https://www.speedrun.com/api/v1/users/y8dwelj6/personal-bests"
+    }
+  ]
+}

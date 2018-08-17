@@ -16,6 +16,9 @@ def shared_pods
 
   # Logging
   pod 'CocoaLumberjack/Swift', '~> 3.4.0'
+  
+  # Clean Code
+  pod 'SwiftLint'
 
 end
 

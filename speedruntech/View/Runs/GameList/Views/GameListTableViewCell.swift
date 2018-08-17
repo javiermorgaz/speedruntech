@@ -15,11 +15,13 @@ class GameListTableViewCell: UITableViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
     
     override func awakeFromNib() {
+        
+        super.awakeFromNib()
         setUpCell()
     }
     
     // MARK: - Public Methods
-    public func updateCell(model:Game) {
+    public func updateCell(model: Game) {
         nameLabel.text = model.name
         if let url = URL(string: model.logoUri) {
             logoImageView.sd_setImage(with: url, placeholderImage: nil)

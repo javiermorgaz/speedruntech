@@ -12,10 +12,12 @@ import UIKit
 public protocol GameListViewControllerDelegate: class {
     
     func viewLoaded()
-    func tapped(game:Game)
+    func tapped(game: Game)
 }
 
-class GameListViewController : BaseViewController, GameListViewInterface {
+class GameListViewController: BaseViewController, GameListViewInterface {
+    
+    private let rowHeight = CGFloat(70)
     
     @IBOutlet weak var gamesTableView: UITableView!
     
@@ -49,30 +51,33 @@ class GameListViewController : BaseViewController, GameListViewInterface {
     func updateFails() {
         
         let cancelAction = UIAlertAction(title: "alertCancel".localized(), style: .cancel) { _ in }
-        let okAction = UIAlertAction(title: "alertRetry".localized(), style: .default) { _ in
+        let retryAction = UIAlertAction(title: "alertRetry".localized(), style: .default) { _ in
             self.delegate?.viewLoaded()
         }
-        
-        showAlert(title: "alertTitle".localized(), message: "alertGameListMessage".localized(), actions: [cancelAction, okAction])
+        showAlert(title: "alertTitle".localized(), message: "alertGameListMessage".localized(), actions: [cancelAction, retryAction])
     }
 
     // MARK: Private Methods
     private func setUpViewController() {
         title = "navigationListTitle".localized()
-        gamesTableView.estimatedRowHeight = 70
+        gamesTableView.estimatedRowHeight = rowHeight
     }
 }
 
-extension GameListViewController : UITableViewDelegate, UITableViewDataSource {
+extension GameListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return games.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let gameCell = gamesTableView.dequeueReusableCell(withIdentifier: String(describing: GameListTableViewCell.self)) as! GameListTableViewCell
-        gameCell.updateCell(model: games[indexPath.row])
-        return gameCell
+
+        if let gameCell = gamesTableView.dequeueReusableCell(withIdentifier: String(describing: GameListTableViewCell.self)) as? GameListTableViewCell {
+            gameCell.updateCell(model: games[indexPath.row])
+            return gameCell
+        } else {
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

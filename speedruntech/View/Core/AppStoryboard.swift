@@ -9,18 +9,18 @@
 import UIKit
 import Foundation
 
-enum AppStoryboard : String {
+enum AppStoryboard: String {
     
-    case Game
+    case game
     
-    var instance : UIStoryboard {
+    var instance: UIStoryboard {
         
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
     
-    func viewController<T : UIViewController>(viewControllerClass : T.Type,
-                                              function : String = #function,
-                                              line : Int = #line, file : String = #file) -> T {
+    func viewController<T: UIViewController>(viewControllerClass: T.Type,
+                                             function: String = #function,
+                                             line: Int = #line, file: String = #file) -> T {
         
         let storyboardID = (viewControllerClass as UIViewController.Type).storyboardID
         
@@ -42,7 +42,7 @@ enum AppStoryboard : String {
 extension UIViewController {
     
     // Not using static as it wont be possible to override to provide custom storyboardID then
-    class var storyboardID : String {
+    class var storyboardID: String {
         
         return "\(self)"
     }

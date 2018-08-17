@@ -14,7 +14,7 @@ public struct RestResponse: JsonDecodable {
         static let data = "data"
     }
     
-    var result:Any?
+    var result: Any?
     
     init?(jsonDictionary: JsonDictionary?) {
         guard let dictionary = jsonDictionary,

@@ -14,7 +14,7 @@ protocol RestClientStubInterface: RestClientInterface {
     var mockPath: String { get set }
 }
 
-public class RestClientStub : RestClient, RestClientStubInterface {
+public class RestClientStub: RestClient, RestClientStubInterface {
     
     public var mockPath: String = "" {
         didSet {

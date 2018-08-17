@@ -15,9 +15,13 @@ class CoreDependences {
     
     private init() {
         
-        //CocoaLumberJack setup
-        DDLog.add(DDASLLogger.sharedInstance, with:.debug)
+        //CocoaLumberJack Setup
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            DDLog.add(DDASLLogger.sharedInstance, with: .off)
+        } else {
+            DDLog.add(DDASLLogger.sharedInstance, with: .debug)
+        }
     }
     
-    lazy var restClient: RestClientInterface = RestClient(baseUrl: "https://www.speedrun.com/api/v1")
+    lazy var restClient: RestClientInterface = RestClient(baseUrl: AppEnvironment.environment.baseURL)
 }

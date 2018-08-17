@@ -1,0 +1,18 @@
+included:
+- speedruntech
+- speedruntechTests
+
+disabled_rules:
+- line_length
+- trailing_whitespace
+
+opt_in_rules:
+- empty_count
+- explicit_init
+- closure_spacing
+- overridden_super_call
+- redundant_nil_coalescing
+- closure_end_indentation
+- prohibited_super_call
+- fatal_error_message
+- unneeded_parentheses_in_closure_argument

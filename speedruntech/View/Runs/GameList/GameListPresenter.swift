@@ -10,19 +10,19 @@ import Foundation
 
 public protocol GameListViewInterface: BaseViewControllerInterface {
     
-    func update(gameList:[Game])
+    func update(gameList: [Game])
     func updateFails()
 }
 
-public protocol GameListCoodinatorDelegate {
-    func presentRunInfo(game:Game)
+public protocol GameListCoodinatorDelegate: class {
+    func presentRunInfo(game: Game)
 }
 
-public class GameListPresenter : GameListViewControllerDelegate {
+public class GameListPresenter: GameListViewControllerDelegate {
     
     private let gameListViewController: GameListViewInterface
     private let gameListUseCase: GameListUseCaseInterface
-    private var delegate:GameListCoodinatorDelegate?
+    private weak var delegate: GameListCoodinatorDelegate?
     
     private var gameList = [Game]()
     
@@ -51,7 +51,7 @@ public class GameListPresenter : GameListViewControllerDelegate {
         })
     }
     
-    public func tapped(game:Game) {
+    public func tapped(game: Game) {
         delegate?.presentRunInfo(game: game)
     }
 }

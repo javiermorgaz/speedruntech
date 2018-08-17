@@ -16,10 +16,13 @@
 "time" = "Time:";
 "video" = "Video";
 "alertRunInfoMessage"  = "Run Info can't be downloaded at this moment";
+"alertVideoMessage" = "Cann't open the video at this moment";
 
 // Alert
 "alertCancel"   = "Cancel";
+"alertOk"       = "Ok";
 "alertRetry"    = "Retry";
 "alertTitle"    = "Error";
+
 
 
