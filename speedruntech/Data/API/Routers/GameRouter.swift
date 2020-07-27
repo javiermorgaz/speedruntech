@@ -10,9 +10,9 @@ import Alamofire
 
 enum GameRouter: URLRequestConvertible {
     
-    case games(baseUrl:String)
-    case runs(baseUrl:String, gameId:String)
-    case users(baseUrl:String, userId:String)
+    case games(baseUrl: String)
+    case runs(baseUrl: String, gameId: String)
+    case users(baseUrl: String, userId: String)
     
     struct RouterKeys {
         static let game = "game"

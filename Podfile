@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '10.0'
+platform :ios, '13.0'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -8,17 +8,17 @@ inhibit_all_warnings!
 def shared_pods
   
   # Networking
-  pod 'Alamofire', '~> 4.5.0'
+  pod 'Alamofire', '~> 5.2.2'
   
   # UI
-  pod 'MBProgressHUD', '~> 1.1.0'
-  pod 'SDWebImage', '~> 4.4.0'
+  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'SDWebImage', '~> 5.8.4'
 
   # Logging
-  pod 'CocoaLumberjack/Swift', '~> 3.4.0'
+  pod 'CocoaLumberjack/Swift', '~> 3.6.1'
   
   # Clean Code
-  pod 'SwiftLint'
+  pod 'SwiftLint', '~> 0.39.2'
 
 end
 
