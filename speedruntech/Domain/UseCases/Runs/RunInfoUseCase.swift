@@ -66,11 +66,7 @@ class RunInfoUseCase: RunInfoUseCaseInterface {
         var canOpenVideo = false
         if let url = URL(string: run.videoUri) {
             if UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                } else {
-                    UIApplication.shared.openURL(url)
-                }
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 canOpenVideo = true
             }
         }

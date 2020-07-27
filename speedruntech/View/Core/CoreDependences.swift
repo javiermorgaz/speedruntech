@@ -17,9 +17,9 @@ class CoreDependences {
         
         //CocoaLumberJack Setup
         if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
-            DDLog.add(DDASLLogger.sharedInstance, with: .off)
+            DDLog.add(DDOSLogger.sharedInstance, with: .off)
         } else {
-            DDLog.add(DDASLLogger.sharedInstance, with: .debug)
+            DDLog.add(DDOSLogger.sharedInstance, with: .debug)
         }
     }
     

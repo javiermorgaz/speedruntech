@@ -31,13 +31,12 @@ class RestClient: RestClientInterface {
                                            success: @escaping ((Any) -> Void),
                                            failure: @escaping (() -> Void)) {
         
-        Alamofire.request(request).validate(statusCode: 200..<401).responseJSON { response in
-            
+        AF.request(request).validate(statusCode: 200..<401).responseJSON { response in
             switch response.result {
             case .success:
                 
                 self.print(response: response)
-                if let resultValue = response.result.value as? JsonDictionary,
+                if let resultValue = response.value as? JsonDictionary,
                     let restResponse = RestResponse(jsonDictionary: resultValue) {
                     success(restResponse.result as Any)
                     
@@ -53,6 +52,29 @@ class RestClient: RestClientInterface {
             }
         }
     }
+        
+//        Alamofire.request(request).validate(statusCode: 200..<401).responseJSON { response in
+//
+//            switch response.result {
+//            case .success:
+//
+//                self.print(response: response)
+//                if let resultValue = response.result.value as? JsonDictionary,
+//                    let restResponse = RestResponse(jsonDictionary: resultValue) {
+//                    success(restResponse.result as Any)
+//
+//                } else {
+//                    self.printParsingError(response: response)
+//                    failure()
+//                }
+//
+//            case .failure:
+//
+//                self.printError(response: response)
+//                failure()
+//            }
+//        }
+//    }
     
     func print<R: URLRequestConvertible>(request: R) {
         
@@ -77,21 +99,21 @@ class RestClient: RestClientInterface {
         DDLogInfo("\n↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️ 🔺\n")
     }
 
-    func print(response: DataResponse<Any>) {
+    func print(response: AFDataResponse<Any>) {
         DDLogInfo("\n🔻 ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅")
         DDLogInfo("Response:")
         DDLogInfo("\(response.debugDescription)")
         DDLogInfo("\n✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅ 🔺\n")
     }
     
-    func printError(response: DataResponse<Any>) {
+    func printError(response: AFDataResponse<Any>) {
         DDLogError("\n🔻 ❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌")
         DDLogError("Response:")
         DDLogError("\n\(response.debugDescription)")
         DDLogError("\n❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌ 🔺\n")
     }
     
-    func printParsingError(response: DataResponse<Any>) {
+    func printParsingError(response: AFDataResponse<Any>) {
         DDLogError("\n🔻 ❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌")
         DDLogError("PARSING RESPONSE ERROR")
         DDLogError("\nResponse:")
